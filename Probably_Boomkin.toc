@@ -1,0 +1,7 @@
+## Interface: 50400
+## Title: Probably - Boomkin
+## Notes: ProbablyEngine Custom Balance Druid
+## Dependencies: Probably
+
+functions.lua
+rotation.lua
