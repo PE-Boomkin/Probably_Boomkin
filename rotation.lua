@@ -12,6 +12,13 @@ ProbablyEngine.rotation.register_custom(102, "Boomkin", {
 -- Barkskin
 { "22812", "modifier.rcontrol" },
 
+
+-- Heart of the Wild + Tranq Modifier
+{{
+{ "108288", "player.spell(108288).exists" },
+{ "740" },
+}, "modifier.rshift" },
+
 -- Renew
 { "108238", "player.health <= 30" },
 
@@ -46,6 +53,15 @@ ProbablyEngine.rotation.register_custom(102, "Boomkin", {
 }}, -- Treants
 }, "modifier.cooldowns" },
   
+-- Moonfire Redot Celestial End
+{ "8921", {
+	"player.buff(112071)",
+	"player.buff(112071).duration < 2",
+	"!target.debuff(145832)",
+	"!target.debuff(145171)",
+	"!target.debuff(145065)",
+	"!target.debuff(145071)"
+}},
 
 -- Starsurge
 { "78674" },
