@@ -98,6 +98,7 @@ ProbablyEngine.rotation.register_custom(102, "Boomkin", {
 
 -- Force of Nature - Trash
 { "106737", {
+	"player.spell(106737).exists",
 	"player.buff(16886)",
 	"player.spell(106737).charges >= 2",
 	"!modifier.cooldowns"
