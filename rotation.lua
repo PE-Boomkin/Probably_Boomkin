@@ -19,8 +19,11 @@ ProbablyEngine.rotation.register_custom(102, "Boomkin", {
 { "740" },
 }, "modifier.rshift" },
 
--- Renew
-{ "108238", "player.health <= 30" },
+-- Renewal
+{ "108238", {
+	"player.spell(108238).exists",
+	"player.health <= 30"
+}},
 
 -- Rejuvenation 
 { "774", {
