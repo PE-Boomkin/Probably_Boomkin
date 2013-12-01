@@ -12,7 +12,7 @@ ProbablyEngine.rotation.register_custom(102, "Boomkin", {
 -- Barkskin
 { "22812", "modifier.rcontrol" },
 
--- Heart of the Wild + Tranq Modifier
+-- Heart of the Wild + Tranq Modifier (Keep this held till Tranquility casts)
 {{
 { "108288", "player.spell(108288).exists" },
 { "740" },
@@ -30,6 +30,9 @@ ProbablyEngine.rotation.register_custom(102, "Boomkin", {
 	"!player.buff(774)",
 	"player.health <= 90"
 }},
+
+-- Cenarion Ward
+{ "Cenarion Ward", "player.health <= 75" },
 
 -- Healthstone
 -- {"#5512", "player.health <= 45"},
