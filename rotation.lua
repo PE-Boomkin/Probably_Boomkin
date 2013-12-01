@@ -12,7 +12,6 @@ ProbablyEngine.rotation.register_custom(102, "Boomkin", {
 -- Barkskin
 { "22812", "modifier.rcontrol" },
 
-
 -- Heart of the Wild + Tranq Modifier
 {{
 { "108288", "player.spell(108288).exists" },
@@ -156,6 +155,11 @@ ProbablyEngine.rotation.register_custom(102, "Boomkin", {
 	"!player.buff(112071)",
 	"@boomkin.interruptEvents(target)"
 }},
+
+}, {
+
+-- Focus Macro - Out of Combat
+{ "!/focus [target=mouseover]", "modifier.lcontrol" },
 
 }, function()
 ProbablyEngine.toggle.create('rejuve', 'Interface\\Icons\\spell_nature_rejuvenation', 'Rejuvenation', 'Toggle Rejuvenation')
