@@ -157,4 +157,6 @@ ProbablyEngine.rotation.register_custom(102, "Boomkin", {
 	"@boomkin.interruptEvents(target)"
 }},
 
-})
+}, function()
+ProbablyEngine.toggle.create('rejuve', 'Interface\\Icons\\spell_nature_rejuvenation', 'Rejuvenation', 'Toggle Rejuvenation')
+end)

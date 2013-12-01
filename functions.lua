@@ -1,12 +1,5 @@
 local boomkin = { }
 
- boomkin.buttons = 
-  ProbablyEngine.toggle.create(
-    'rejuve',
-    'Interface\\Icons\\spell_nature_rejuvenation',
-    'Rejuvenation',
-    'Toggle Rejuvenation...') 
-
 function boomkin.interruptEvents(unit)
   if UnitBuff("player", 31821) then return true end -- Devo
   if not unit then unit = "boss1" end
