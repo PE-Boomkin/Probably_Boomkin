@@ -3,8 +3,30 @@
 
 ProbablyEngine.rotation.register_custom(102, "Boomkin", {
 
+-- Force Moonkin Form - In Combat
+{ "!/cancelform", {
+	"toggle.moonkin",
+	"player.seal = 1"
+}},
+
+{ "!/cancelform", {
+	"toggle.moonkin",
+	"player.seal = 3"
+}},
+
+{ "24858", {
+	"toggle.moonkin",
+	"!player.seal = 5"
+}},
+
 -- Pause Rotation
 { "pause", "modifier.lalt" },
+
+-- Pause Rotation - Bear Form
+{ "pause", "player.seal = 1" },
+
+-- Pause Rotation - Cat Form
+{ "pause", "player.seal = 3" },
 
 -- Focus Macro
 { "!/focus [target=mouseover]", "modifier.lcontrol" },
@@ -169,5 +191,6 @@ ProbablyEngine.rotation.register_custom(102, "Boomkin", {
 
 }, function()
 ProbablyEngine.toggle.create('rejuve', 'Interface\\Icons\\spell_nature_rejuvenation', 'Rejuvenation', 'Toggle Rejuvenation')
+ProbablyEngine.toggle.create('moonkin', 'Interface\\Icons\\spell_nature_forceofnature', 'Moonkin Form - Combat', 'Toggle To Force Moonkin Form - In Combat Only')
 
 end)
