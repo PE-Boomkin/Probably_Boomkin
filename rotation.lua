@@ -75,6 +75,7 @@ ProbablyEngine.rotation.register_custom(102, "Boomkin", {
 { "106731", "player.spell(106731).exists" }, -- Incarnation
 { "112071" }, -- Celestial Alignment
 { "26297", "player.spell(26297).exists" }, -- Berserking
+{ "110621", "player.spell(110621).exists" }, -- Mirror Images
 { "106737", {
 	"player.spell(106737).exists",
 	"player.buff(16886)",
@@ -87,10 +88,7 @@ ProbablyEngine.rotation.register_custom(102, "Boomkin", {
 { "8921", {
 	"player.buff(112071)",
 	"player.buff(112071).duration < 2",
-	"!target.debuff(145832)",
-	"!target.debuff(145171)",
-	"!target.debuff(145065)",
-	"!target.debuff(145071)"
+	"@boomkin.garroshMC(target)"
 }},
 
 -- Starsurge
@@ -99,47 +97,29 @@ ProbablyEngine.rotation.register_custom(102, "Boomkin", {
 -- Dots Moonfire/Sunfire
 { "8921", { 
 	"target.debuff(8921).duration < 2",
-	"!target.debuff(145832)",
-	"!target.debuff(145171)",
-	"!target.debuff(145065)",
-	"!target.debuff(145071)"
+	"@boomkin.garroshMC(target)"
 }},
 { "93402", { 
 	"target.debuff(93402).duration < 2",
-	"!target.debuff(145832)",
-	"!target.debuff(145171)",
-	"!target.debuff(145065)",
-	"!target.debuff(145071)"
+	"@boomkin.garroshMC(target)"
 }},
 { "8921", { 
 	"mouseover.debuff(8921).duration < 2",
-	"!mouseover.debuff(145832)",
-	"!mouseover.debuff(145171)",
-	"!mouseover.debuff(145065)",
-	"!mouseover.debuff(145071)",
+	"@boomkin.garroshMC",
 	"modifier.multitarget"
 }, "mouseover" },
 { "93402", { 
 	"mouseover.debuff(93402).duration < 2",
-	"!mouseover.debuff(145832)",
-	"!mouseover.debuff(145171)",
-	"!mouseover.debuff(145065)",
-	"!mouseover.debuff(145071)",
+	"@boomkin.garroshMC",
 	"modifier.multitarget"
 }, "mouseover" },
 { "8921", { 
 	"focus.debuff(8921).duration < 2",
-	"!focus.debuff(145832)",
-	"!focus.debuff(145171)",
-	"!focus.debuff(145065)",
-	"!focus.debuff(145071)"
+	"@boomkin.garroshMC"
 }, "focus" },
 { "93402", { 
 	"focus.debuff(93402).duration < 2",
-	"!focus.debuff(145832)",
-	"!focus.debuff(145171)",
-	"!focus.debuff(145065)",
-	"!focus.debuff(145071)"
+	"@boomkin.garroshMC"
 }, "focus" },
 
 -- Force of Nature - Trash
@@ -155,18 +135,12 @@ ProbablyEngine.rotation.register_custom(102, "Boomkin", {
 { "8921", {
 	"player.balance.moon",
 	"player.moving",
-	"!target.debuff(145832)",
-	"!target.debuff(145171)",
-	"!target.debuff(145065)",
-	"!target.debuff(145071)"
+	"@boomkin.garroshMC(target)"
 }},
 { "93402", {
 	"player.balance.sun",
 	"player.moving",
-	"!target.debuff(145832)",
-	"!target.debuff(145171)",
-	"!target.debuff(145065)",
-	"!target.debuff(145071)"
+	"@boomkin.garroshMC(target)"
 }},
 
  -- Starfire/Wrath
